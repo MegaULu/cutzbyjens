@@ -3,82 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cutz by Jens</title>
+  <title>Cuts by Jens</title>
+
+  <!-- TikTok Icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
   <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui, Arial, sans-serif;}
     body{background:#0f0f14;color:#f4f4f6;}
+
     .hero{
       min-height:100vh;
       background:
         linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-        url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+        url('hintergrund.png') center/cover no-repeat;
       display:flex;
       align-items:center;
       justify-content:center;
-      text-align:center;
       padding:20px;
     }
+
     .box{
-      background:rgba(22,22,34,.85);
+      background:rgba(22,22,34,.88);
       padding:24px;
-      border-radius:16px;
-      max-width:400px;
+      border-radius:18px;
+      max-width:440px;
       width:100%;
+      text-align:center;
     }
-    h1{font-size:32px;margin-bottom:8px;}
-    .tag{color:#e6b86a;font-weight:600;margin-bottom:12px;}
+
+    h1{font-size:32px;margin-bottom:6px;}
+    .tag{color:#e6b86a;font-weight:600;margin-bottom:14px;}
+
     p{color:#ccc;margin-bottom:12px;font-size:15px;line-height:1.4;}
+
     .btn{
-      display:inline-block;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
       background:#e6b86a;
       color:#111;
       text-decoration:none;
-      padding:12px 20px;
-      border-radius:12px;
+      padding:12px 22px;
+      border-radius:14px;
       font-weight:700;
-      margin-top:8px;
+      margin-top:10px;
+      transition:all .25s ease;
     }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(230,184,106,.35);
+    }
+
     .card{
-      background:rgba(22,22,34,.85);
+      background:rgba(22,22,34,.9);
       padding:16px;
       border-radius:14px;
-      margin-top:16px;
+      margin-top:18px;
       text-align:left;
     }
+
     .status{font-size:14px;color:#ccc;line-height:1.4;}
+
+    .open-grid{
+      display:grid;
+      gap:16px;
+    }
+
+    @media(min-width:520px){
+      .open-grid{
+        grid-template-columns:1.2fr .8fr;
+        align-items:center;
+      }
+    }
+
+    .social{
+      text-align:center;
+    }
+
+    .social img{
+      width:100%;
+      max-width:110px;
+      border-radius:12px;
+      margin-bottom:10px;
+      box-shadow:0 6px 16px rgba(0,0,0,.4);
+    }
+
+    .social p{
+      font-size:13px;
+      margin-bottom:8px;
+      color:#ddd;
+    }
+
+    .tiktok-btn{
+      background:#000;
+      color:#fff;
+      border:1px solid #333;
+    }
+
+    .tiktok-btn:hover{
+      background:#111;
+      box-shadow:0 8px 20px rgba(0,0,0,.6);
+    }
   </style>
 </head>
 <body>
-  <section class="hero">
-    <div class="box">
-      <h1>Cutz by Jens</h1>
-      <div class="tag">Friseur · Haarschnitt</div>
-      <p>Männlicher Haarschnitt – Preis: <b>5 €</b></p>
-       <p>🔥 Neukunden-Deal: Bring einen Neukunden mit und erhalte einmalig   50 % RABATT auf deinen Haarschnitt.</p>
 
-      <a href="https://megaulu.github.io/cutzbyjens-buchen/" class="btn">Jetzt buchen</a>
+<section class="hero">
+  <div class="box">
+    <h1>Cuts by Jens</h1>
+    <div class="tag">Friseur · Haarschnitt</div>
 
-      <div class="card">
-        <h3>Öffnungszeiten</h3>
-        <p class="status">
-          Montag: 14:30–18:30<br>
-          Dienstag: 16:15–18:15<br>
-          Mittwoch: 14:15–17:15<br>
-          Donnerstag: 16:15–18:15<br>
-          Freitag: 14:30–18:30<br>
-          Samstag: 14:30–18:30<br>
-          Sonntag: 14:30–18:30
-        </p>
-        <p class="status">⏱ Zeitslots = 1 Stunde</p>
+    <p>Männlicher Haarschnitt – <b>5 €</b></p>
+    <p>🔥 Neukunden-Deal: Bring einen Neukunden mit und erhalte einmalig <b>50 % Rabatt</b>.</p>
+
+    <a href="https://megaulu.github.io/cutzbyjens-buchen/" class="btn">
+      Jetzt buchen
+    </a>
+
+    <div class="card">
+      <div class="open-grid">
+
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p class="status">
+            Montag: 14:30–18:30<br>
+            Dienstag: 16:15–18:15<br>
+            Mittwoch: 14:15–17:15<br>
+            Donnerstag: 16:15–18:15<br>
+            Freitag: 14:30–18:30<br>
+            Samstag: 14:30–18:30<br>
+            Sonntag: 14:30–18:30
+          </p>
+          <p class="status">⏱ Zeitslots = 1 Stunde</p>
+        </div>
+
+        <div class="social">
+          <img src="hintergrund.png" alt="Cuts by Jens">
+          <p>Visit Cuts by Jens on TikTok</p>
+          <a href="https://www.tiktok.com/@cutsbyjens?is_from_webapp=1&sender_device=pc" class="btn tiktok-btn">
+            <i class="fa-brands fa-tiktok"></i>
+            TikTok
+          </a>
+        </div>
+
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
+
 </body>
 </html>
-
-
-
-
 
 
 
